@@ -2,9 +2,11 @@
     "name": "simple adblock",
     "version": "1.0",
     "description": "block ads!",
-    "permissions": ["webRequest", "webRequestBlocking", "<all_urls>"],
+    "permissions": ["webRequest", "webRequestBlocking", "<all_urls>", "storage"],
     "background": {
         "scripts": ["background.js"]
     },
-    "manifest_version": 2
+    "options_page": "options.html",
+    "manifest_version": 2,
+    "content_security_policy": "script-src 'self' object-src 'self'"
 }
