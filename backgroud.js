@@ -17,7 +17,7 @@ function lists() {
         console.log(final);
         for (let i = 0; i < final.length; i++) {
             let url_h = "*://".concat(final[i]);
-            url_h = url_h.concat("/")
+            url_h = url_h.concat("/*")
             final[i] = url_h;
         }
         console.log(final);
