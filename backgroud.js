@@ -3,7 +3,7 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 
 function lists() {
-    fetch("https://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts")
+    fetch("https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt")
     .then(function(response) {
     response.text().then(function(text) {
         var final_pls = text.replaceAll("0.0.0.0 ", "");
@@ -12,9 +12,7 @@ function lists() {
         final = final.filter(function(value) {
             return value.indexOf('#') < 0;
         });
-        console.log(final);
         final = final.filter(item => item);
-        console.log(final);
         for (let i = 0; i < final.length; i++) {
             let url_h = "*://".concat(final[i]);
             url_h = url_h.concat("/*")
